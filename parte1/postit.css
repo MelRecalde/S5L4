@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /*border: 1px solid;*/
+    max-width: 100%;
+    font-size: 30px;
+    /*font-family: "Indie Flower", cursive;*/
+    font-family: "Caveat", cursive;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content:space-evenly;
+    justify-content: center;
+    margin: 3%;
+    padding: 5px;
+    border: 10px solid rgb(134, 59, 4);
+    gap: 25px 25px;
+    background-image: url(./wood-board-background_1339-5418.avif);
+}
+
+.postit {
+    /*border: 1px solid ;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin: 2px;
+    width: 200px;
+    height: 205px;
+    /*box-shadow: inset -2px -3px 10px 1px rgba(0, 0, 0, 0.336);*/
+    justify-content: center;
+    cursor: pointer;
+    color: #0000009d;
+    transition: transform 2ms;
+}
+
+.postit:hover {
+    transform: scale(1.1);
+    color: #000000;
+    text-shadow: 1px 1px 2px 1px;
+    box-shadow: 0px 1px 10px 3px #0000005e;
+    z-index: 900;
+}
+
+.postit h1 {
+    font-size: 40px;
+}
+
+.postit p {
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.p1,
+.p5,
+.p7 {
+    background: linear-gradient(2deg,rgba(136, 135, 135, 0.39) 0%, #f1eba0 19%);
+    background-color: #f1eba0;
+    transform: rotate(-3deg);
+}
+
+.p2,
+.p4,
+.p8 {
+    background: linear-gradient(2deg,rgb(136, 135, 135, 0.39) 0%, #afeb7e 19%);
+    background-color: #afeb7e;
+    transform: rotate(7deg);
+}
+
+.p3, .p6 {
+    background: linear-gradient(2deg,rgb(136, 135, 135, 0.39) 0%, #dda0dd 19%);
+    background-color: #dda0dd;
+    transform: rotate(-5deg);
+}
