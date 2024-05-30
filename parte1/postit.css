@@ -11,7 +11,6 @@ body {
     font-size: 30px;
     /*font-family: "Indie Flower", cursive;*/
     font-family: "Caveat", cursive;
-
 }
 
 .container {
@@ -26,6 +25,18 @@ body {
     background-image: url(./wood-board-background_1339-5418.avif);
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translate(20%,30%);
+    }
+    50% {
+        transform: translate(0%);
+    }
+    to {
+        opacity: 1;
+    }
+}
 .postit {
     /*border: 1px solid ;*/
     display: flex;
@@ -39,7 +50,6 @@ body {
     justify-content: center;
     cursor: pointer;
     color: #0000009d;
-    transition: transform 2ms;
 }
 
 .postit:hover {
@@ -50,38 +60,68 @@ body {
     z-index: 900;
 }
 
+@keyframes pinAppear {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .postit img {
     position: absolute;
     top: 0;
-    transition: transform 1.5s;
-}
-
-.p3 img {
-    right: 40px;
 }
 
 .p1 img {
+    right: 40px;
+    animation: pinAppear 1s;
+}
+
+.p2 img {
     left: 60px;
+    animation: pinAppear 1.2s;
+}
+
+.p3 img {
+    right: 20px;
+    animation: pinAppear 1.4s;
 }
 
 .p4 img {
-    right: 20px;
+    right: 80px;
+    animation: pinAppear 1.6s;
 }
 
+.p5 img {
+    left: 45px;
+    animation: pinAppear 1.8s;
+}
 .p6 img {
-    right: 80px
+    right: 20px;
+    animation: pinAppear 2s;
+}
+
+.p7 img {
+    right: 80px;
+    animation: pinAppear 2.2s;
 }
 
 .p8 img {
     left: 45px;
+    animation: pinAppear 2.4s;
 }
 
 @keyframes slidePin {
-    0% {
-      transform: translateX(0%);
+    from {
+      transform: translateY(0%);
     }
-    100% {
-      transform: translateX(100%);
+    to {
+      transform: translateY(-100%);
       opacity: 0;
     }
   }
@@ -107,6 +147,9 @@ body {
     background: linear-gradient(2deg,rgba(136, 135, 135, 0.39) 0%, #f1eba0 19%);
     background-color: #f1eba0;
     transform: rotate(-3deg);
+    animation-name: appear;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
 }
 
 .p2,
@@ -115,10 +158,16 @@ body {
     background: linear-gradient(2deg,rgb(136, 135, 135, 0.39) 0%, #afeb7e 19%);
     background-color: #afeb7e;
     transform: rotate(7deg);
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .p3, .p6 {
     background: linear-gradient(2deg,rgb(136, 135, 135, 0.39) 0%, #dda0dd 19%);
     background-color: #dda0dd;
     transform: rotate(-5deg);
+    animation-name: appear;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
 }
