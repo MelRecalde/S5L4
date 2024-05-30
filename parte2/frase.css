@@ -8,5 +8,35 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+main {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    background-image: linear-gradient(pink, beige);
+}
+
+#testoAlternato {
+    border: 5px dashed #e9a745;
+    background-color: bisque;
+    font-family: "Bree Serif", serif;
+    padding: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: larger;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px  rgb(63, 52, 38);
+}
+
+@keyframes rotation {
+    
+}
 
